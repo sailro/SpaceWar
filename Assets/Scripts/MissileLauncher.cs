@@ -30,7 +30,7 @@ public class MissileLauncher : MonoBehaviour
 		{
 			var currentrb = GetComponent<Rigidbody2D>();
 			var magnitude = currentrb.velocity.magnitude;
-			if (Mathf.Approximately(magnitude,0))
+			if (Mathf.Approximately(magnitude, 0))
 				return;
 
 			shootCooldown = shootingRate;

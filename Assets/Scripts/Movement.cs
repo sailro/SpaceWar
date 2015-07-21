@@ -41,14 +41,14 @@ public class Movement : MonoBehaviour
 
 	public void FixedUpdate()
 	{
-		transform.Rotate(0, 0, hAxis*-rotationSpeed);
+		transform.Rotate(0, 0, hAxis * -rotationSpeed);
 		var currentrb = GetComponent<Rigidbody2D>();
 
-		var heading = transform.rotation*Vector3.right;
-		currentrb.AddForce(heading*moveSpeed*vAxis);
+		var heading = transform.rotation * Vector3.right;
+		currentrb.AddForce(heading * moveSpeed * vAxis);
 
 		var thrusters = GetComponentInChildren<ParticleSystem>();
-		thrusters.emissionRate = 1000*vAxis;
+		thrusters.emissionRate = 1000 * vAxis;
 	}
 
 	public void OnDestroy()

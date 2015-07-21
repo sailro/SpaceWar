@@ -106,7 +106,7 @@ public class ScreenWrapper : MonoBehaviour
 		foreach (var ghost in ghosts)
 		{
 			if (ghost.position.x < screenWidth && ghost.position.x > -screenWidth &&
-			    ghost.position.y < screenHeight && ghost.position.y > -screenHeight)
+				ghost.position.y < screenHeight && ghost.position.y > -screenHeight)
 			{
 				transform.position = ghost.position;
 				break;
