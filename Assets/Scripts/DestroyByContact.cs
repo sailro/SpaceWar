@@ -15,7 +15,11 @@ public class DestroyByContact : MonoBehaviour
 		if (dbc == null || dbc.destroyable)
 		{
 			var instance = Instantiate(explosion, other.transform.position, other.transform.rotation);
-			Destroy(other.gameObject);
+
+			var go = other.gameObject;
+			ScoreController.RegisterDeath(go);
+			Destroy(go);
+
 			Destroy(instance, 5);
 		}
 
